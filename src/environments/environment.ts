@@ -4,6 +4,8 @@
 
 export const environment = {
   production: false,
+  movieDBAPI: 'https://api.themoviedb.org/3',
+  secretKey: '?api_key=7a79bcc3776d2e02e7ae3d852e3d62e1',
   firebaseConfig: {
     apiKey: "AIzaSyDmCIDEyCq4GCKYUz3QO0ZSBFlw_tYCB3Q",
     authDomain: "hollywoodtv-2fa99.firebaseapp.com",

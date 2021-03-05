@@ -11,12 +11,20 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MoviesListComponent } from './components/movies-list/movies-list.component';
+import { MoviesDetailsComponent } from './components/movies-details/movies-details.component'
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
-    NavbarComponent
+    NavbarComponent,
+    CarouselComponent,
+    MoviesListComponent,
+    MoviesDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +34,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     AngularFireAuthModule,
     AngularFireModule,
     AngularFireStorageModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
