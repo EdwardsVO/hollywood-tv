@@ -11,12 +11,16 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
@@ -24,9 +28,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     BrowserAnimationsModule,
     MaterialModule,
     AngularFireAuthModule,
-    AngularFireModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
