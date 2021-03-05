@@ -5,7 +5,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule } from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
-import { MatCarouselModule } from '@ngbmodule/material-carousel';
+import {MatIconModule} from '@angular/material/icon';
+// import { MatCarouselModule } from '@ngbmodule/material-carousel';
 
 @NgModule({
     imports: [
@@ -13,10 +14,10 @@ import { MatCarouselModule } from '@ngbmodule/material-carousel';
         MatListModule,
         MatButtonModule,
         MatFormFieldModule,
-
+        MatIconModule,
         MatInputModule,
         MatCardModule,
-        MatCarouselModule.forRoot(),
+        // MatCarouselModule.forRoot(),
     ],
     exports: [
         MatToolbarModule,
@@ -24,7 +25,8 @@ import { MatCarouselModule } from '@ngbmodule/material-carousel';
         MatButtonModule,
         MatFormFieldModule,
         MatInputModule,
-        MatCardModule
+        MatCardModule,
+        MatIconModule
     ]
 })
 
