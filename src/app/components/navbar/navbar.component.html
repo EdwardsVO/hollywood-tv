@@ -1,1 +1,15 @@
-<p>navbar works!</p>
+<mat-toolbar>
+    <div class="container">
+      <span>HollywoodTV</span>
+      <div class="menu-classic">
+        <a routerLink="/home" mat-button> Home </a>
+        <a routerLink="/movies" mat-button> Peliculas </a>
+        <a routerLink="/reserves" mat-button> Reservas </a>
+        <a routerLink="" mat-button> Favoritos</a>
+      </div>
+      <div class="menu-log">
+        <a routerLink="/login" mat-raised-button color="primary" >LOGIN</a>
+        <button mat-raised-button color="primary" (click)="logOut()">Cerrar Sesion</button>
+      </div>
+    </div>
+  </mat-toolbar>
