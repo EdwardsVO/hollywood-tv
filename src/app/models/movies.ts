@@ -1,10 +1,8 @@
 export interface Movies {
-    adult: boolean;
     poster_path: string;
     budget: number;
-    genres: {
-        id: number;
-        name: string;
+    genre_ids: {
+        id: []
     }
     id: number;
     original_language: string;
@@ -19,5 +17,4 @@ export interface Movies {
         iso_639_1: string,
         name: string
     ];
-
 }
