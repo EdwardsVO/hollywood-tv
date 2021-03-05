@@ -11,10 +11,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-<<<<<<< src/app/app.module.ts
 
-
-=======
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { environment } from 'src/environments/environment';
@@ -22,7 +19,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MoviesListComponent } from './components/movies-list/movies-list.component';
 import { MoviesDetailsComponent } from './components/movies-details/movies-details.component'
->>>>>>> src/app/app.module.ts
+
 
 
 @NgModule({
@@ -30,14 +27,11 @@ import { MoviesDetailsComponent } from './components/movies-details/movies-detai
     AppComponent,
     LandingPageComponent,
     NavbarComponent,
-<<<<<<< src/app/app.module.ts
-
-=======
     LoginPageComponent,
     CarouselComponent,
     MoviesListComponent,
     MoviesDetailsComponent
->>>>>>> src/app/app.module.ts
+
   ],
   imports: [
     BrowserModule,
@@ -48,13 +42,9 @@ import { MoviesDetailsComponent } from './components/movies-details/movies-detai
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule,
     AngularFirestoreModule,
-    HttpClientModule
-<<<<<<< src/app/app.module.ts
-    
-=======
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule
->>>>>>> src/app/app.module.ts
   ],
   providers: [],
   bootstrap: [AppComponent]
