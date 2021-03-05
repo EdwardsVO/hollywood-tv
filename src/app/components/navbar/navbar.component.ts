@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
+import firebase from 'firebase';
 
 @Component({
   selector: 'app-navbar',
@@ -7,14 +9,22 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  user: firebase.User = null;
 
-  constructor(authService: AuthService) { }
+  constructor(private _authService: AuthService, private _router: Router) { }
 
   ngOnInit(): void {
-  }
+    this._authService.getCurrentUser().subscribe(
+      user => {
+        this.user = user;
+    }
+    )}
 
   logOut():void {
-    console.log("salir")
+    this._authService.logOut().then(()=>{
+      this._router.navigate(['']);
+    });
   }
 
 }
+

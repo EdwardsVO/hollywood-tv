@@ -18,7 +18,11 @@ import { environment } from 'src/environments/environment';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MoviesListComponent } from './components/movies-list/movies-list.component';
-import { MoviesDetailsComponent } from './components/movies-details/movies-details.component'
+import { MoviesDetailsComponent } from './components/movies-details/movies-details.component';
+import { FavoritePagesComponent } from './pages/favorite-pages/favorite-pages.component';
+import { ReservePageComponent } from './pages/reserve-page/reserve-page.component';
+import { MoviesPageComponent } from './pages/movies-page/movies-page.component';
+import { DetailsPageComponent } from './pages/details-page/details-page.component'
 
 
 
@@ -30,7 +34,11 @@ import { MoviesDetailsComponent } from './components/movies-details/movies-detai
     LoginPageComponent,
     CarouselComponent,
     MoviesListComponent,
-    MoviesDetailsComponent
+    MoviesDetailsComponent,
+    FavoritePagesComponent,
+    ReservePageComponent,
+    MoviesPageComponent,
+    DetailsPageComponent
 
   ],
   imports: [

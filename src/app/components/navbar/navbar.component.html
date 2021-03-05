@@ -2,14 +2,18 @@
     <div class="container">
       <span>HollywoodTV</span>
       <div class="menu-classic">
-        <a routerLink="/home" mat-button> Home </a>
+        <a routerLink="/home" mat-button> 
+          <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon> </a>
         <a routerLink="/movies" mat-button> Peliculas </a>
         <a routerLink="/reserves" mat-button> Reservas </a>
-        <a routerLink="" mat-button> Favoritos</a>
+        <a routerLink="/favorites" mat-button> Favoritos</a>
       </div>
       <div class="menu-log">
-        <a routerLink="/login" mat-raised-button color="primary" >LOGIN</a>
-        <button mat-raised-button color="primary" (click)="logOut()">Cerrar Sesion</button>
+        <a routerLink="/login" mat-raised-button color="primary" *ngIf="!user">LOGIN</a>
+        <button class="profile-data" mat-flat-button *ngIf="user">{{user.displayName}} <img src="{{user.photoURL}}" alt="" mat-card-avatar> </button>
+        <button mat-raised-button color="primary" (click)="logOut()">
+          <mat-icon aria-hidden="false" aria-label="Example home icon" *ngIf="user">logout</mat-icon>
+        </button>
       </div>
     </div>
   </mat-toolbar>
