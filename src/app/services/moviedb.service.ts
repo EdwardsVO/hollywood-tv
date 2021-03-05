@@ -12,13 +12,15 @@ export class MoviedbService {
   constructor(private http: HttpClient) {}
 
   searchMovies(query = '') {
-    return this.http.get<Movies[]>(`${environment.movieDBAPI}/movie/${query}${environment.secretKey}`)
+    // return this.http.get<Movies[]>(`${environment.movieDBAPI}/movie/${query}${environment.secretKey}`)
   };
 
   getDetails(id: number) {
-    return this.http.get<Movies> (`${environment.movieDBAPI}/movie/${id}${environment.secretKey}`)} 
+    // return this.http.get<Movies> (`${environment.movieDBAPI}/movie/${id}${environment.secretKey}`)
+  } 
   
-  allMovies() {
-    return this.http.get<Movies>(`${environment.movieDBAPI}/configuration${environment.secretKey}`)}
+  allMovies(page: number) {
+    return this.http.get<Movies>(`${environment.movieDBAPI}/discover/movie${environment.secretKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&${page}`)
+  }
 
 }
