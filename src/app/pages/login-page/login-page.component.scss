@@ -1,0 +1,23 @@
+.container{
+    margin-top: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+span{
+    color: primary;
+}
+
+form{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+mat-form-field{
+    margin-top: 1rem;
+}
+
+button{
+    margin-top: 1rem;
+}
