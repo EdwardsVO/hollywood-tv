@@ -40,9 +40,18 @@ export class MoviesListComponent implements OnInit {
     this.moviesLoad = true;
   });
   }
-  
 
-  goUp():void {
-    console.log("salir")
+  private getMovieDetails(id: number): void {
+      this.MoviesSvc.getDetails(id).subscribe((res) =>{
+      this.movies = res;
+      console.log(this.movies)
+      this.moviesList = this.movies.results
+      this.moviesLoad = true;
+  });
+}
+
+  onDetailsClick(id: number) {
+    this.getMovieDetails(id);
   }
+
 }

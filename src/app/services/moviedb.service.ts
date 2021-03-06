@@ -17,7 +17,7 @@ export class MoviedbService {
   };
 
   getDetails(id: number) {
-    // return this.http.get<Movies> (`${environment.movieDBAPI}/movie/${id}${environment.secretKey}`)
+    return this.http.get<Movies> (`${environment.movieDBAPI}/movie/${id}${environment.secretKey}`)
   } 
   
   allMovies(page: number): Observable<Movies> {

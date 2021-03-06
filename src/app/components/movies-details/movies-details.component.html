@@ -1,1 +1,14 @@
-<p>movies-details works!</p>
+<div class="movies" *ngIf = "movies$ | async as movie">
+    <div class="container">
+        <mat-card>
+            <img mat-mat-card-image src="" alt="">
+            <mat-card-title>{{movie.original_title}}</mat-card-title>
+            <div class="content">
+                <mat-card-subtitle>Fecha de Estreno: {{movie.release_date}}</mat-card-subtitle>
+                <mat-card-subtitle>Puntuación: {{movie.vote_average}}</mat-card-subtitle>
+            </div>
+        </mat-card>
+    </div>
+    <button mat-raised-button color="primary" (click) = 'onBack();'>Back</button>
+
+</div>
