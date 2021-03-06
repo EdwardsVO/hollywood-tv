@@ -1,21 +1,23 @@
-mat-toolbar{
-    width: 100%;
+mat-toolbar {
+  width: 100%;
+  position: fixed;
+  z-index: 100;
 }
 
-.container{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-a{
-    margin-left: 4rem;
-    font-size: 14px;
+a {
+  margin-left: 4rem;
+  font-size: 14px;
 }
-.menu-log{
-    padding-right: 3rem;
+.menu-log {
+  padding-right: 3rem;
 }
 
-.profile-data{
-    margin-right: 1rem;
+.profile-data {
+  margin-right: 1rem;
 }
