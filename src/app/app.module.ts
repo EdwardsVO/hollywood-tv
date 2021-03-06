@@ -23,7 +23,8 @@ import { FavoritePagesComponent } from './pages/favorite-pages/favorite-pages.co
 import { ReservePageComponent } from './pages/reserve-page/reserve-page.component';
 import { MoviesPageComponent } from './pages/movies-page/movies-page.component';
 import { DetailsPageComponent } from './pages/details-page/details-page.component';
-import { SearchMovieComponent } from './components/search-movie/search-movie.component'
+import { SearchMovieComponent } from './components/search-movie/search-movie.component';
+import { FooterComponent } from './components/footer/footer.component'
 
 
 
@@ -40,7 +41,8 @@ import { SearchMovieComponent } from './components/search-movie/search-movie.com
     ReservePageComponent,
     MoviesPageComponent,
     DetailsPageComponent,
-    SearchMovieComponent
+    SearchMovieComponent,
+    FooterComponent
 
   ],
   imports: [
