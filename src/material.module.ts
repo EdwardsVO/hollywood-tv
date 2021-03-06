@@ -6,6 +6,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule } from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
 // import { MatCarouselModule } from '@ngbmodule/material-carousel';
 
 @NgModule({
@@ -17,6 +18,7 @@ import {MatIconModule} from '@angular/material/icon';
         MatIconModule,
         MatInputModule,
         MatCardModule,
+        MatDividerModule,
         // MatCarouselModule.forRoot(),
     ],
     exports: [
@@ -26,7 +28,8 @@ import {MatIconModule} from '@angular/material/icon';
         MatFormFieldModule,
         MatInputModule,
         MatCardModule,
-        MatIconModule
+        MatIconModule,
+        MatDividerModule,
     ]
 })
 

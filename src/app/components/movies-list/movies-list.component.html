@@ -12,5 +12,10 @@
             onDetailsClick(movie.id);">
             Mas Info</a>
         </mat-card>
+        <div class="pages">
+            <button mat-flat-button *ngIf="!pageOne" (click)="movePage('ant')" >Página Anterior</button>
+            <button mat-flat-button (click)="movePage('sig')" >Página Siguiente</button>
+        </div>
     </div>
 </div>
+
