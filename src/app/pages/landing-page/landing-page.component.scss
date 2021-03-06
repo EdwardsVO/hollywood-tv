@@ -4,19 +4,41 @@
 }
 h2 {
   text-align: left;
-  font-size: 30px;
-  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
   margin-left: 60px;
+  font-weight: 400;
   margin-top: 20px;
 }
+h1 {
+  font-size: 80px;
+  font-weight: 400;
+  font-family: "Poppins";
+}
+.welcome {
+  position: absolute;
+  font-family: "Poppins";
+  margin-top: -500px;
+  font-size: 80px;
+  margin-left: 100px;
+  color: #bf1b68;
+  font-style: 400;
+}
+
+.welcome .by {
+  font-size: 20px;
+  color: white;
+  margin-left: 500px;
+  margin-top: 350px;
+}
+
 img {
   width: 60%;
   margin-bottom: 1rem;
-  
 }
-.title-container{
+.title-container {
   width: 100%;
-  background-color:#BF1B68;
+  background-color: #bf1b68;
   height: 5rem;
   display: flex;
   align-items: center;
@@ -34,11 +56,6 @@ mat-card {
   width: 25%;
   display: inline-block;
 }
-
-// mat-card .fondo {
-//   position: absolute;
-//   background-color: #e91e63;
-// }
 
 .content {
   text-align: left;
