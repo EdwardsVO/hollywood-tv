@@ -20,8 +20,8 @@ export class MoviedbService {
     // return this.http.get<Movies> (`${environment.movieDBAPI}/movie/${id}${environment.secretKey}`)
   } 
   
-  allMovies(page: number): Observable<Movies[]> {
-    return this.http.get<Movies[]>(`${environment.movieDBAPI}/discover/movie${environment.secretKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}`)
+  allMovies(page: number): Observable<Movies> {
+    return this.http.get<Movies>(`${environment.movieDBAPI}/discover/movie${environment.secretKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}`)
   }
 
 }
