@@ -3,6 +3,7 @@
   text-align: center;
 }
 h2 {
+  font-family: 'Poppins', sans-serif;
   text-align: left;
   font-size: 40px;
   font-family: "Poppins", sans-serif;
@@ -43,6 +44,9 @@ img {
   display: flex;
   align-items: center;
   border: black solid 0.5px;
+  border-radius: 3px;
+  color: white;
+  justify-content: space-between;
 }
 
 mat-card-title {

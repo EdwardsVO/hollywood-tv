@@ -1,3 +1,5 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,200&display=swap" rel="stylesheet">
 <div class="header" *ngIf="moviesLoad">
     <div class="container">
 
@@ -15,7 +17,10 @@
 
         <div class="body">
         <div class="title-container">
-            <h2 class="title">Proximos Estrenos</h2>
+            <h2 class="title">PROXIMOS ESTRENOS</h2>
+            <div class="btn">
+                <a mat-flat-button routerLink="/movies">See More</a>
+            </div>
         </div>
 
         
@@ -52,9 +57,7 @@
                 </mat-card-subtitle>
             </div>
     </mat-card>
-    <div class="btn">
-        <button mat-flat-button >See More</button>
-    </div>
+    
 </div>
 
         
@@ -63,7 +66,10 @@
 <div class="container">
 
     <div class="title-container">
-        <h2 class="title">Movies</h2>
+        <h2 class="title">MOVIES</h2>
+        <div class="btn">
+            <a mat-flat-button routerLink="/movies">See More</a>
+        </div>
     </div>
 
         <mat-card *ngFor="let movie of moviesList">
@@ -101,11 +107,6 @@
 
         </mat-card>
 
-        <div class="btn">
-            <a mat-flat-button routerLink="/movies">See More</a>
-        </div>
-
 
     </div>
 </div>
-
