@@ -9,5 +9,10 @@
             </div>
             <button mat-raised-button color="primary"> Mas info</button>
         </mat-card>
+        <div class="pages">
+            <button mat-flat-button *ngIf="!pageOne" (click)="movePage('ant')" >Página Anterior</button>
+            <button mat-flat-button (click)="movePage('sig')" >Página Siguiente</button>
+        </div>
     </div>
 </div>
+

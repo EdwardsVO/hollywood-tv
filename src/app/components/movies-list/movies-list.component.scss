@@ -1,7 +1,6 @@
 .movies{
   width: 100%;
-  display: flex;
-  justify-content: center;
+  
 }
 .container {
   width: 100%;
@@ -23,9 +22,15 @@ mat-card-title{
 }
 
 mat-card{
-  margin: 1rem;
+  margin: 28px;
   width: 25%;
   display: inline-block;
 }
 
+.pages{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+}
 
