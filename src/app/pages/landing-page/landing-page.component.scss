@@ -12,6 +12,15 @@ h2 {
 img {
   width: 60%;
   margin-bottom: 1rem;
+  
+}
+.title-container{
+  width: 100%;
+  background-color:#BF1B68;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  border: black solid 0.5px;
 }
 
 mat-card-title {

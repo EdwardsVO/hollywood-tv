@@ -19,7 +19,8 @@ export class MoviesDetailsComponent implements OnInit {
 
   @Input() currentID: number;
   movies: Movies = null;
-  moviesList: any = [];
+  detailsList: any = [];
+  moviesLoad= false;
   movies$: Observable<Movies>;
 
   constructor(private route: ActivatedRoute, private MoviesSvc: MoviedbService, private location: Location ) { }
@@ -29,12 +30,18 @@ export class MoviesDetailsComponent implements OnInit {
     }
   
   getDetails(id: number){
-    this.MoviesSvc.getDetails(id)
+    this.MoviesSvc.getDetails(this.currentID).subscribe((res) => {
+      this.movies = res;
+      this.detailsList = this.movies.results
+      this.moviesLoad = true;
+    })
   }
 
   onBack(): void {
     this.location.back();
   }
-
+  print(){
+    console.log(this.currentID)
+  }
 }
 
