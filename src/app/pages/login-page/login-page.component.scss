@@ -1,23 +1,25 @@
-.container{
-    margin-top: 5rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.container {
+  display: inline-block;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  margin-top: 150px;
 }
-span{
-   color: #BF1B68;
-}
-
-form{
-    width: auto;
-    display: flex;
-    flex-direction: column;
+span {
+  color: #bf1b68;
 }
 
-mat-form-field{
-    margin-top: 1rem;
+form {
+  width: auto;
+  display: flex;
+  flex-direction: column;
 }
 
-button{
-    margin-top: 1rem;
+mat-form-field {
+  margin-top: 1rem;
+}
+
+button {
+  margin-top: 1rem;
 }
