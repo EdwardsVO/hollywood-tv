@@ -2,11 +2,13 @@
     <div class="container">
 
         <img mat-mat-card-image 
-        src="https://media.vozpopuli.com/2021/02/EuropaPress_3190584_salas_cines_florida_vitoria-gasteiz_dia_reapertura_paron_coronavirus_60-scaled-e1612649328985-1568x523.jpg" 
+        src="https://images.unsplash.com/photo-1501103777042-0aeb4df8ff8f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8aG9sbHl3b29kfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80" 
         alt="cine" class="headerCine">
         <mat-divider></mat-divider>
         <div class="body">
-        <h2 class="title">Proximos Estrenos</h2>
+        <div class="title-container">
+            <h2 class="title">Proximos Estrenos</h2>
+        </div>
 
         
         <mat-card class="mat-card-estrenos"
@@ -51,7 +53,10 @@
 
 
 <div class="container">
+
+    <div class="title-container">
         <h2 class="title">Movies</h2>
+    </div>
 
         <mat-card *ngFor="let movie of moviesList">
 

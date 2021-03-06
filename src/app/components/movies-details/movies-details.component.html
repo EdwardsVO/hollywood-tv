@@ -8,4 +8,15 @@
             </div>
         </mat-card>
     </div>
+    <button mat-raised-button color="primary" (click)="print()" >Back </button>
+    <div class="container" *ngIf="moviesLoad">
+        <mat-card *ngFor="let movie of detailsList">
+            <img mat-mat-card-image src="" alt="">
+            <mat-card-title>{{movie.original_title}}</mat-card-title>
+            <div class="content">
+                <mat-card-subtitle>Fecha de Estreno: {{detailsList.original_title}}</mat-card-subtitle>
+                <mat-card-subtitle>Puntuación: </mat-card-subtitle>
+            </div>
+        </mat-card>
+    </div>
     <button mat-raised-button color="primary" >Back </button>
