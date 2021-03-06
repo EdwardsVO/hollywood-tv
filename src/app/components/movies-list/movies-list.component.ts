@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Movies } from 'src/app/models/movies';
 import { MoviedbService } from 'src/app/services/moviedb.service';
 import { take } from "rxjs/operators"
@@ -15,7 +15,8 @@ type RequestInfo = {
   styleUrls: ['./movies-list.component.scss']
 })
 export class MoviesListComponent implements OnInit {
-
+  @Output() idMovie: EventEmitter<number> = new EventEmitter();
+  @Output() getDetails: EventEmitter<boolean> = new EventEmitter();
   
   movies: Movies = null;
   moviesList: any = [];
@@ -41,6 +42,7 @@ export class MoviesListComponent implements OnInit {
     console.log(this.movies)
     this.moviesList = this.movies.results
     this.moviesLoad = true;
+    this.getDetails.emit(false);
     if(this.pageNum > 1){
       this.pageOne = false;
     }
@@ -62,17 +64,13 @@ export class MoviesListComponent implements OnInit {
       }
   }
 
-  private getMovieDetails(id: number): void {
-      this.MoviesSvc.getDetails(id).subscribe((res) =>{
-      this.movies = res;
-      console.log(this.movies)
-      this.moviesList = this.movies.results
-      this.moviesLoad = true;
-  });
-}
 
   onDetailsClick(id: number) {
-    this.getMovieDetails(id);
+    console.log(id)
+    this.getDetails.emit(true);
+    this.idMovie.emit(id)
+
   }
 
 }
+
