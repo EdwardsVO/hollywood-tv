@@ -3,9 +3,9 @@
   text-align: center;
 }
 h2 {
+  font-family: 'Poppins', sans-serif;
   text-align: left;
   font-size: 30px;
-  font-family: "Roboto", sans-serif;
   margin-left: 60px;
   margin-top: 20px;
 }
@@ -17,10 +17,13 @@ img {
 .title-container{
   width: 100%;
   background-color:#BF1B68;
-  height: 5rem;
+  height: 4rem;
   display: flex;
   align-items: center;
   border: black solid 0.5px;
+  border-radius: 3px;
+  color: white;
+  justify-content: space-between;
 }
 
 mat-card-title {
