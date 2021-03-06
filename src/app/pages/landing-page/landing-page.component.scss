@@ -1,0 +1,66 @@
+.container {
+  width: 100%;
+  text-align: center;
+}
+h2 {
+  text-align: left;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  margin-left: 60px;
+  margin-top: 20px;
+}
+img {
+  width: 60%;
+  margin-bottom: 1rem;
+}
+
+mat-card-title {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+mat-card {
+  margin: 20px;
+  width: 25%;
+  display: inline-block;
+}
+
+// mat-card .fondo {
+//   position: absolute;
+//   background-color: #e91e63;
+// }
+
+.content {
+  text-align: left;
+  padding-top: 3%;
+}
+
+.pages {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  text-align: right;
+  margin-right: 70px;
+  position: relative;
+}
+
+.like {
+  position: absolute;
+  margin-left: 20px;
+}
+
+// div .body {
+//   background-color: #e91e63;
+// }
+
+.headerCine {
+  width: auto;
+  position: relative;
+  height: auto;
+  padding: 0;
+}

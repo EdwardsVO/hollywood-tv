@@ -24,4 +24,8 @@ export class MoviedbService {
     return this.http.get<Movies>(`${environment.movieDBAPI}/discover/movie${environment.secretKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}`)
   }
 
+  upComing() {
+    return this.http.get<Movies> (`${environment.movieDBAPI}/movie/upcoming${environment.secretKey}&language=en-US`)
+  }
+
 }

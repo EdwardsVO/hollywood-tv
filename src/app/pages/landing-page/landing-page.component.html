@@ -1,1 +1,98 @@
+<div class="header" *ngIf="moviesLoad">
+    <div class="container">
+
+        <img mat-mat-card-image 
+        src="https://media.vozpopuli.com/2021/02/EuropaPress_3190584_salas_cines_florida_vitoria-gasteiz_dia_reapertura_paron_coronavirus_60-scaled-e1612649328985-1568x523.jpg" 
+        alt="cine" class="headerCine">
+        <mat-divider></mat-divider>
+        <div class="body">
+        <h2 class="title">Proximos Estrenos</h2>
+
+        
+        <mat-card class="mat-card-estrenos"
+        *ngFor="let movie of UpComingMoviesList">
+            
+
+            <img mat-mat-card-image 
+            src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" 
+            alt="{{movie.original_title}}">
+
+            <button mat-icon-button color="warn" aria-label="heart icon" class="like">
+                <mat-icon>favorite</mat-icon>
+      </button>
+            <mat-card-title>
+                {{movie.original_title}}
+            </mat-card-title>
+            
+            <div class="content">
+                <mat-card-subtitle>
+                    Idioma original: {{movie.original_language}}
+                </mat-card-subtitle>
+
+                <mat-card-subtitle>
+                    Fecha de Estreno: {{movie.release_date}}
+                </mat-card-subtitle>
+
+                <mat-card-subtitle>
+                    Puntuación: {{movie.vote_average}}
+                </mat-card-subtitle>
+
+                <mat-card-subtitle>
+                    Popularidad: {{movie.popularity}}
+                </mat-card-subtitle>
+            </div>
+    </mat-card>
+    <div class="btn">
+        <button mat-flat-button >See More</button>
+    </div>
+</div>
+
+        
+
+
+<div class="container">
+        <h2 class="title">Movies</h2>
+
+        <mat-card *ngFor="let movie of moviesList">
+
+            <img mat-mat-card-image 
+            src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" 
+            alt="{{movie.original_title}}">
+
+            <button mat-icon-button color="warn" aria-label="heart icon" class="like">
+                <mat-icon>favorite</mat-icon>
+      </button>
+
+            <mat-card-title>
+                {{movie.original_title}}
+            </mat-card-title>
+            
+            <div class="content">
+                <mat-card-subtitle>
+                    Idioma original: {{movie.original_language}}
+                </mat-card-subtitle>
+
+                <mat-card-subtitle>
+                    Fecha de Estreno: {{movie.release_date}}
+                </mat-card-subtitle>
+
+                <mat-card-subtitle>
+                    Puntuación: {{movie.vote_average}}
+                </mat-card-subtitle>
+
+                <mat-card-subtitle>
+                    Popularidad: {{movie.popularity}}
+                </mat-card-subtitle>
+
+            </div>
+
+        </mat-card>
+
+        <div class="btn">
+            <a mat-flat-button routerLink="/movies">See More</a>
+        </div>
+
+
+    </div>
+</div>
 
