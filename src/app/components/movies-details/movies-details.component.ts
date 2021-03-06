@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Location } from '@angular/common'
@@ -17,6 +17,7 @@ type RequestInfo = {
 })
 export class MoviesDetailsComponent implements OnInit {
 
+  @Input() currentID: number;
   movies: Movies = null;
   moviesList: any = [];
   movies$: Observable<Movies>;
@@ -24,10 +25,11 @@ export class MoviesDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private MoviesSvc: MoviedbService, private location: Location ) { }
 
   ngOnInit(): void{
-    this.route.params.pipe(take(1)).subscribe((params) => {
-      const id = params['id'];
-      this.movies$ = this.MoviesSvc.getDetails(id);
-    }) 
+    this.getDetails(this.currentID);
+    }
+  
+  getDetails(id: number){
+    this.MoviesSvc.getDetails(id)
   }
 
   onBack(): void {
@@ -35,3 +37,4 @@ export class MoviesDetailsComponent implements OnInit {
   }
 
 }
+
