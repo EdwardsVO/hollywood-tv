@@ -16,7 +16,10 @@ type RequestInfo = {
 })
 export class MoviesListComponent implements OnInit {
 
-  movies: Movies[] = [];
+  
+  movies: Movies = null;
+  moviesList: any = [];
+  moviesLoad: boolean = false;
   info: RequestInfo = {
     page: null,
 };
@@ -30,12 +33,14 @@ export class MoviesListComponent implements OnInit {
   ngOnInit(): void {this.getDataFromService();}
 
   private getDataFromService (): void{
-  this.MoviesSvc.allMovies(this.pageNum).subscribe((res) =>/*data => this.movies = data*/{
+  this.MoviesSvc.allMovies(this.pageNum).subscribe((res) =>{
     this.movies = res;
-    // console.log(res);
-    console.log(this.movies);
+    console.log(this.movies)
+    this.moviesList = this.movies.results
+    this.moviesLoad = true;
   });
   }
+  
 
   goUp():void {
     console.log("salir")

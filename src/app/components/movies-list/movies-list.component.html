@@ -1,1 +1,5 @@
-<p>movies.id</p>
+<div *ngIf="moviesLoad">
+    <mat-card *ngFor="let movie of moviesList">
+        <mat-card-title>{{movie.original_title}}</mat-card-title>
+    </mat-card>
+</div>
