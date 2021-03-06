@@ -30,13 +30,11 @@ export class MoviesListComponent implements OnInit {
   ngOnInit(): void {this.getDataFromService();}
 
   private getDataFromService (): void{
-    this.MoviesSvc.allMovies(this.pageNum).subscribe ((res) => {
-
-      console.log('Response ->', res);
-      //const {info, results} = res;
-     // this.movies = [... this.movies, ...results]
-      //this.info = [... this.info,info]
-    });
+  this.MoviesSvc.allMovies(this.pageNum).subscribe((res) =>/*data => this.movies = data*/{
+    this.movies = res;
+    // console.log(res);
+    console.log(this.movies);
+  });
   }
 
   goUp():void {
