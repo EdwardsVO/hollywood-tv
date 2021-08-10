@@ -1,4 +1,7 @@
 # Microproyecto2VergelVivas
+This project is a quiz made for Information Systems subject.
+The program connects to a REST API that brings all movies data need it.
+It was develop on Angular CLI 11.1.4 and Angular Material 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.4.
 
